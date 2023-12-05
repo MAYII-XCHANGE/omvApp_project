@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMVpay | Dashboard Page</title>
+    <link rel="stylesheet" href="/dashboard/dashboard.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Public+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <div class="sidebar">
+            <header>
+                <div class="logo">Logo</div>
+                <div id="burger" class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </header>
+            <ul class="side-links">
+                <a href=" " class="link page-active">
+                    <li>
+                        <i class="fa-solid fa-house"></i>
+                        <p>Home</p>
+                    </li>
+                </a>
+                <!-- <a href="./payment.html " class="link " >
+                    <li>
+                        <i class="fa-regular fa-credit-card"></i>
+                        <p>Payments</p>
+                    </li>
+                </a> -->
+                <a href=" " class="link">
+                    <li>
+                        <i class="fa-solid fa-gear"></i>
+                        <p>Account</p>
+                    </li>
+                </a>
+
+
+
+            </ul>
+          
+        </div>
+        <main class="main-content">
+            <header>
+                <div class="search-sec">
+                    <form action="">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search here">
+                    </form>
+                </div>
+                <div class="profile-sec">
+                        <h4>Welcome Back!!! <span> &nbsp;<i class="fa-solid fa-user"></i> Mr. Olanrewaju</span></h4>
+                        <button onclick="confirmLogout()">Log out</button>
+                </div>
+            </header>
+
+            <!-- User Dashboard Contents -->
+            <div class="d-wrapper">
+                <div class="left">
+                    <div class="cards bg-white b-ra">
+                        <div class="card green">
+                            <div class="icon">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+                            <div class="content">
+                                <h2>1000</h2>
+                                <p>Amount Owed</p>
+                            </div>
+                        </div>
+                        <div class="card gold">
+                            <div class="icon ">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+                            <div class="content">
+                                <h2>1000</h2>
+                                <p>Pending Payments</p>
+                            </div>
+                        </div>
+                        <!-- <div class="card blue">
+                            <div class="icon">
+                                <i class="fa-solid fa-user-group"></i>
+                            </div>
+                            <div class="content">
+                                <h2>1000</h2>
+                                <p>Available Staff</p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="bottom bg-white mt b-ra">
+                        <h3>Transactions</h3><br>
+                        <table>
+                            <tr>
+                                <th>Id</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Status</th>
+
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>11/15/2023</td>
+                                <td>Oct Payment</td>
+                                <td >
+                                    <button class="pending">
+                                        Pending 
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>11/15/2023</td>
+                                <td>Oct Payment</td>
+                                <td >
+                                    <button class="approved">
+                                        Approved
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>11/15/2023</td>
+                                <td>Oct Payment</td>
+                                <td >
+                                    <button class="rejected">
+                                        Rejected
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>11/15/2023</td>
+                                <td>Oct Payment</td>
+                                <td >
+                                    <button class="rejected">
+                                        Rejected
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>11/15/2023</td>
+                                <td>Oct Payment</td>
+                                <td >
+                                    <button class="rejected">
+                                        Rejected
+                                    </button>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <div class="right bg-white b-ra">
+                    <h2>Payment </h2>
+                    <button class="addPayment" onclick="openModal()">Add new payment</button>
+
+                    <div id="modal-overlay">
+                        <div id="modal">
+                            <span id="close-btn" onclick="closeModal()">&times;</span>
+                            <div id="form-container">
+                                <h2>Payment</h2>
+                                <form id="login-form" onsubmit="submitForm(event)">
+                                    <div class="form-group">
+                                        <label for="username">Payment slip:</label>
+                                        <input type="file" required>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="note">Note:</label>
+                                        <textarea name="" id="" required cols="30" rows="10"></textarea>
+                                    </div>
+
+                                    <button type="submit">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="toast-container">
+                        <p id="toast-message"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../index.js"></script>
+</body>
+
+</html>

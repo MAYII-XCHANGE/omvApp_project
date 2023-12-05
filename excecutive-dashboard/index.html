@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMVpay | Admin Dashboard page</title>
+    <link rel="stylesheet" href="./dashboard.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Public+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="dashboard">
+        <div class="sidebar">
+            <header>
+                <div class="logo">Logo</div>
+                <div id="burger" class="hamburger">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </header>
+            <ul class="side-links">
+                <a href=" " class="link page-active">
+                    <li>
+                        <i class="fa-solid fa-house"></i>
+                        <p>Home</p>
+                    </li>
+                </a>
+                <!-- <a href="./payment.html " class="link " >
+                    <li>
+                        <i class="fa-regular fa-credit-card"></i>
+                        <p>Payments</p>
+                    </li>
+                </a> -->
+                <a href=" " class="link">
+                    <li>
+                        <i class="fa-solid fa-gear"></i>        
+                        <p>Account</p>
+                    </li>
+                </a>
+
+
+
+            </ul>
+          
+        </div>
+        <main class="main-content">
+            <header>
+                <div class="search-sec">
+                    <form action="">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search here">
+                    </form>
+                </div>
+                <div class="profile-sec">
+                        <h4>Welcome Back!!! <span> &nbsp;<i class="fa-solid fa-user"></i> Admin </span></h4>
+                        <button onclick="confirmLogout()">Log out</button>
+                </div>
+            </header>
+
+            <!-- Executive Dashboard Contents-->
+            <div class="e-d-wrapper">
+                <h1>Excecutive Dashboard</h1>
+                <div>
+                    <div class="bottom bg-white mt b-ra">
+                        <h3>Payments</h3><br>
+                        <table>
+                            <tr>
+                                <th>Id</th>
+                                <th>Date</th>
+                                <th>Member Name</th>
+                                <th>Action</th>
+
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>11/15/2023</td>
+                                <td>Mr. Olanrewaju</td>
+                                <td >
+                                    <button class="approved" id="openModalBtn">
+                                        View 
+                                    </button>
+                                </td>
+                            </tr>
+                         
+                            <div id="myModal" class="modal">
+                                <div class="modal-content">
+                                  <span class="close" id="closeModalBtn">&times;</span>
+                                 <div class="desc">
+                                    <div>
+                                        <div>
+                                            <span> <b>Note</b> </span>
+                                            <p>Type message here ..........</p>
+                                        </div>
+                                        
+                                    </div>
+                                    <div >
+                                        
+                                        <img src="./imgs/receipt.jpg" alt="">
+                                    </div>
+                                   
+                                 </div>
+                                 <div class="btns">
+                                    <button class="approvedd">Approve</button>
+                                    <button class="rejectedd">Reject</button>
+                                   
+                                </div>
+                                </div>
+                              </div>
+                        </table>
+                        
+                    </div>
+
+                   
+                </div>
+               
+            </div>
+        </main>
+    </div>
+    <script src="../index.js"></script>
+</body>
+
+</html>
