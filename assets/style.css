@@ -30,6 +30,9 @@ section h1{
 h1, h2{
   color: #333;
 }
+h3 {
+  color: #f4902b;
+}
 .mt-1{
   margin-top: 1rem;
 }
@@ -253,7 +256,7 @@ textarea {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #183a69;
     color: #fff;
     padding: 10px 20px;
     border: none;

@@ -30,7 +30,7 @@ Manage your funds seamlessly with the integrated community wallet, allowing for 
 Keep track of your financial activities with a detailed transaction history, providing transparency and accountability.
 
 5. Notifications
-Receive real-time notifications for succeful or declined payment transactions
+Receive real-time notifications for successful or declined payment transactions
 
 # Usage
 Login: Enter your credentials to access your account or create an account if not done.
